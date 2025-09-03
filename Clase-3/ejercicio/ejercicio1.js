@@ -2,19 +2,34 @@
 
 // ejemplos: oso, ana, 
 
-function invertirTexto(){
+function invertirTexto(palabra){
 
-    return ""
+    return palabra.split("").reverse().join("")
+
+    // i = 0;
+    // arrayInvertido = []
+    // while(palabra.length > i){
+    //     arrayInvertido.unshift(palabra.charAt(i))
+    //     i++
+    // }
+    // let palabraInvertida = arrayInvertido.join("")
+    // return palabraInvertida
 }
 
 const esPalindromo = (palabras) => {
     // tiene que retornar un array con las palabras palindromas
     let palindromas = []
-    //1- metan un bucle
-    //2- pasen las palabras a misculas
-    //3- inviertan las palabras
-    //4- comparen la palabra original con la invertida
-    // let palabraInvertida = invertirTexto(palabra)
+
+    for (const palabra of palabras) {
+        let palabraMinuscula = palabra.toLowerCase()
+
+        let palabraInvertida = invertirTexto(palabraMinuscula)
+
+        if(palabraMinuscula === palabraInvertida){
+            palindromas.push(palabra)
+        }
+    }
+   
 
     return palindromas
 }
@@ -26,6 +41,6 @@ const resultado = esPalindromo(palabras)
 console.log("Resultado: ", resultado);
 
 
-let ejemplo = "Oso"
+// let ejemplo = "Oso"
 
-console.log(ejemplo.toLowerCase());
+// console.log(ejemplo.toLowerCase());

@@ -35,7 +35,7 @@ frutas.unshift("Kiwi")
 let numeros = [5, 7, 1, 23, 27]
 
 const alCuadrado = numeros.map(function(num) {
-    console.log("num: ", num);
+    // console.log("num: ", num);
     return num * num
 } )
 
@@ -48,8 +48,8 @@ const mas5 = numeros.map( num => {
 }) // arrow function
 
 
-console.log("menos5: ", menos5);
-console.log("mas5: ", mas5);
+// console.log("menos5: ", menos5);
+// console.log("mas5: ", mas5);
 
 
 
@@ -58,7 +58,7 @@ console.log("mas5: ", mas5);
 
 const mayoresASiete = numeros.filter(num => num > 7)
 
-console.log("mayoresASiete: ", mayoresASiete);
+// console.log("mayoresASiete: ", mayoresASiete);
 
 
 let alumnos = ["Mateo", "Valentina", "Agustin"]
@@ -67,7 +67,7 @@ let alumnos = ["Mateo", "Valentina", "Agustin"]
 const estaMateo = alumnos.filter(nombre => nombre === "Mateo")
 
 
-console.log("estaMateo: ", estaMateo);
+// console.log("estaMateo: ", estaMateo);
 
 
 
@@ -79,7 +79,7 @@ let sumaTotal = numeros.reduce((acumulador, num) => {
     return acumulador + num
 })
 
-console.log("Suma Total: ", sumaTotal);
+// console.log("Suma Total: ", sumaTotal);
 
 
 const user = [
@@ -97,7 +97,7 @@ const sum = user.reduce((acc, num) => {
 }, 0)
 
 
-console.log("Suma users: ", sum);
+// console.log("Suma users: ", sum);
 
 
 
@@ -105,20 +105,33 @@ console.log("Suma users: ", sum);
 
 const primerMayor7 = numeros.find(number => number > 7)
 
-console.log("primerMayor7: ",primerMayor7);
+// console.log("primerMayor7: ",primerMayor7);
 
 
 // some, Si alguno cumple con la condicion, retorna true
 
 const alumnoCumple = numeros.some(num => num === 15)
 
-console.log("alumnoCumple: ", alumnoCumple);
+// console.log("alumnoCumple: ", alumnoCumple);
 
 // every, solo devuelve true, si todos cumplen con la condicion
 
 const alumnoCumple2 = numeros.every(num => num > 3)
 
-console.log("alumnoCumple2: ", alumnoCumple2);
+// console.log("alumnoCumple2: ", alumnoCumple2);
+
+
+let palabra = 'minuscula'
+
+// console.log(palabra.split(""));
+
+let supermercado = ["Banana", "Manzana", "Frutilla"]
+
+
+console.log(supermercado.join(" "));
+
+
+
 
 
 
