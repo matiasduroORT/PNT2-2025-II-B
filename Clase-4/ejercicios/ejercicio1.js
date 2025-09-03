@@ -4,11 +4,26 @@
 
 function separarUsuariosCallback(lista, callback){
 
-    console.log("lista: ", lista);
+    let hombres = []
+    let mujeres = []
 
-    // tiene que devolver un array de hombres, y otro de mujeres
+    lista.forEach(user => {
+        console.log("user: ", user.sexo);
+        
+        if(user.sexo === "M"){
+            hombres.push(user.nombre)
+        }else{
+            mujeres.push(user.nombre)
+        }
+    });
+
+
+    // tiene que devolver un objeto con array de hombres, y otro de mujeres
  
-    callback({})
+    callback({
+        hombres: hombres,
+        mujeres: mujeres
+    })
 }
 
 
@@ -22,5 +37,5 @@ const usuarios = [
 
 separarUsuariosCallback(usuarios, (resultado) => {
     console.log("Resultado: ", resultado)
-     
+
 })
