@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Button } from '../Button/Button'
 
 export const Counter = () => {
 
@@ -9,20 +10,25 @@ export const Counter = () => {
     // la cual, se va a encargar de setear nuestro estado
     const [contador, setContador] = useState(0)
 
-    const handleClick = () => {
-        console.log("Click");
-        console.log("Contador: ", contador);
-        setContador(contador + 1)
+    const handleMinus = () =>{
+
+        if(contador > 0){
+            setContador(contador - 1)
+        }else{
+            setContador(0)
+        }
     }
+
   return (
     <>
 
     <h3>{contador}</h3>
-    <button onClick={handleClick}>
-        + 1
-    </button>
+    <Button setContador={() => setContador(contador + 1)} titulo={"+1"}/>
+    <Button setContador={handleMinus} titulo={"-1"}/>
+    <Button setContador={() => setContador(0)} titulo={"reset"}/>
+
     {/* Button que reduzca el contador en -1 */}
-    {/* boton que reduzca el contador a 0 */}
+    {/* button que reduzca el contador a 0 */}
     </>
   )
 }
