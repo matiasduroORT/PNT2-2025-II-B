@@ -13,7 +13,8 @@ export const Navbar = () => {
                 <h1 className="navbar-title">Mini Pokedex</h1>
                 <div className="team-counter">Equipo: {team.length}/6</div>
               </div>
-    
+
+              
               <div className="team-section">
                 <div className="team-label">Nuestro Equipo:</div>
                 {team.length === 0 ? (
