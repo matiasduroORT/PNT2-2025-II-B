@@ -1,7 +1,10 @@
 import React from 'react'
+import ProtectedRoute from '../ProtectedRoute'
 
 export default function page() {
   return (
-    <div>Productos</div>
+    <ProtectedRoute>
+      <div>Productos</div>
+    </ProtectedRoute>
   )
 }
